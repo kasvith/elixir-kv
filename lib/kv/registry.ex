@@ -25,7 +25,6 @@ defmodule KV.Registry do
   end
 
   @impl true
-
   def init(:ok) do
     names = %{}
     refs = %{}

@@ -1,28 +1,21 @@
-defmodule KV.MixProject do
+defmodule KvUmbrella.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :kv,
+      apps_path: "apps",
       version: "0.1.0",
-      elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
-  def application do
-    [
-      extra_applications: [:logger],
-      mod: {KV, []}
-    ]
-  end
-
-  # Run "mix help deps" to learn about dependencies.
+  # Dependencies listed here are available only for this
+  # project and cannot be accessed from applications inside
+  # the apps folder.
+  #
+  # Run "mix help deps" for examples and options.
   defp deps do
-    [
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
-    ]
+    []
   end
 end
